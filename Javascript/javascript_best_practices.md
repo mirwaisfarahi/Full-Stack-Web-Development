@@ -21,3 +21,7 @@
 5. Do not use `document.write` or `eval`
 6. Add `node_modules` dir to your .gitignore file as all those files are not needed in your repo (each team member will install all packages thanks to your package.json file).
 7. Do not commit old pieces of code as inline comments. They will make your project look messy. If you need to review a previous version of your code, you can always use git history.
+
+## Refresher on JavaScript best practices
+[best practices by w3schools](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/javascript_best_practices.md)
+[Check out JavaScript common mistakes by w3schools as well] (https://www.w3schools.com/js/js_best_practices.asp)
