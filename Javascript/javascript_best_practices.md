@@ -24,4 +24,4 @@
 
 ## Refresher on JavaScript best practices
 [best practices by w3schools](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/javascript_best_practices.md)
-[Check out JavaScript common mistakes by w3schools as well] (https://www.w3schools.com/js/js_best_practices.asp)
+[Check out JavaScript common mistakes by w3schools as well](https://www.w3schools.com/js/js_best_practices.asp)
