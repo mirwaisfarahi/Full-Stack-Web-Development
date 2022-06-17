@@ -191,3 +191,5 @@ test('should create an element with text and correct class', async () => {
 - In Example above: we simply tell the browser what to do, we can get access to the DOM elements and validate their state, and values.
 
 > Note: To know about various testing tools visit [The Criteria For Choosing JavaScript Testing Frameworks](https://medium.com/weekly-webtips/mastering-testing-world-in-javascript-web-ea0180b469b4)
+
+> Note: We will look at Jest Framekwork to test javascript code.
