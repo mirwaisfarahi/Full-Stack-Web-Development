@@ -167,3 +167,27 @@ return false
 return generateText(name, age)
 }
 ```
+#### End-to-End (e2e)/ UI test:
+- End-to-end testing is a Software testing methodology to test an application flow from start to end. The purpose of End to end testing is to simulate the real user scenario and validate the system under test and its components for integration and data integrity.
+- These kinds of tests simulate a certain user interaction flow with your app. This involves clicking, entering text, etc.
+- And since it involves this, we need a headless browser. Actually, all tests run in the headless browser but they’ll not load up your app. They just need a browser JavaScript environment (i.e. essentially an empty browser window that’s loaded up behind the scenes).
+
+```
+test('should create an element with text and correct class', async () => {
+  const browser = await puppeteer.launch({
+    headless: true,
+  })
+  const page = await browser.newPage()
+  await page.goto('localhost:4002/page-name')
+  await page.click('input#userName')
+  await page.type('input#userName', 'robert')
+  await page.click('input#age')
+  await page.type('input#age', '40')
+  await page.click('#btnAddUser')
+  const finalText = await page.$eval('.user-item', el => el.textContent)
+  expect(finalText).toBe('Anna (40 years old)')
+}, 10000)
+```
+- In Example above: we simply tell the browser what to do, we can get access to the DOM elements and validate their state, and values.
+
+> Note: To know about various testing tools visit [The Criteria For Choosing JavaScript Testing Frameworks](https://medium.com/weekly-webtips/mastering-testing-world-in-javascript-web-ea0180b469b4)
