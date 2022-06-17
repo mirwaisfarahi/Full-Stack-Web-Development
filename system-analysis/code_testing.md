@@ -91,7 +91,7 @@ Compared to manual testing, automated testing is
 
 ##### Basic Example without Testing Framework:
 
-`
+```
 /*
 ====================================
 Divide function
@@ -111,9 +111,7 @@ function divide(x,y){
 }
 
 /*
-====================================
 Unit Test Function test divide function
-====================================
 */
 function canDivide(x,y,result){
   console.log("--> it can be divide "+ x + " by " + y + " to equal to "+ res);
@@ -129,9 +127,6 @@ canDivide( 24 , 2 , 12 );
 canDivide( 0 , 1 , "Invalid!" );
 canDivide( 10 , 0 , "Not Allowed!" );
 canDivide( 0 , 0 , "Not Allowed!" );
-`
-
-
-
+```
 
  
