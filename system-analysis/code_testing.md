@@ -193,3 +193,19 @@ test('should create an element with text and correct class', async () => {
 > Note: To know about various testing tools visit [The Criteria For Choosing JavaScript Testing Frameworks](https://medium.com/weekly-webtips/mastering-testing-world-in-javascript-web-ea0180b469b4)
 
 > Note: We will look at Jest Framekwork to test javascript code.
+
+#### Unit Testing and the Arrange, Act and Assert (AAA) Pattern
+- he AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. it says to plan your test in three sections called Arrange (where code required to setup that specific test. Here objects would be created, mocks setup (if you are using one) and potentially expectations would be set), Act, which should be the invocation of the method being tested and Assert (defend, stand up for) simply means to check expectations were met.
+
+- Example:
+```
+// arrange
+var repository = Substitute.For<IClientRepository>();
+var client = new Client(repository);
+// act
+client.Save();
+// assert
+mock.Received.SomeMethod();
+```
+
+> Note: More details [Unit Testing and the Arrange, Act and Assert (AAA) Pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80)
