@@ -28,3 +28,5 @@ The process starts with writing some simple test code which fails then writing t
 
 ### Example
 - look at test-driven-development.js and test-driven-development.test.js files for complete code about TDD.
+- Another example from [JavaScript Testing - Mocking Async Code](https://www.youtube.com/watch?v=4Fl5GH4eYZ8) with index.html, __mock__, http.js, utils.js and utils.test.js Files.
+- Another Example for DOM test using jest [DOM Manipulation](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/testing/lesson_more_about_unit_tests_in_js.md)
