@@ -11,4 +11,4 @@ var myArray = [
 var item = myArray.find(item => item.id === 2);
 
 // print
-console.log(item.name);
+console.log(item);
