@@ -25,14 +25,14 @@ Implement the bisect on the bisect.js file.
 
 #### Steps
 1. git log => to find out all the commits on your file
-2. git bisect start => To start the bisect
+2. git bisect start => To start the bisect 
 3. git bisect bad => mark the current commit as bad because there is bug and application is not working
-4. git bisect good [commit-hash id] => the commit id when the application was working good. Now check whether the application is on its stable state. If not then type again => git bisect bad (to make bad the current revision of commit).
+4. git bisect good [commit-hash id] => the commit id when the application was working good. Now check whether the application is on its stable state. If not then type again => git bisect bad (to make bad the current revision of commit). Repeat this until u get to a stable state of your application.
 5. git bisect good => because the application is working. The file code has been reversed to the commit when the application was working fine.
 6. git bisect reset => it will reset back to the commit that we were there before bisect and it will reset all the changes we made so far with bisect.
 
 #### How to View the Changes?
 1. git show [bad commit id] => which shows the changes we made in that particular commit.
 
-#### How to Revert from a Commit?
-1. git revert [bad commit id] => to revert the changes made in this commit.
+#### How to Reset from a Commit?
+1. git reset => to reset the changes made in this commit.
