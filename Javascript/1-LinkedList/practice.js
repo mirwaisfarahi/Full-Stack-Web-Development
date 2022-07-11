@@ -25,6 +25,7 @@ class LinkedList {
             current = current.next;
         }
     }
+
     static traverseRecursive = (head) => {
         if(head == null) return
         console.log(head.data)
@@ -40,6 +41,7 @@ class LinkedList {
         }
         current.next = new Node(data);
     }
+    
     static appendRecursive = (head, data) => {
         if(head.next == null) return head.next = new Node(data);
         this.appendRecursive(head.next, data)
