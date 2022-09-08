@@ -217,9 +217,68 @@ class Cats extends React.Component {
 ```
 In this example, the Cats component is initialized with timeToEat: false. This state can change at any moment. Then, timeToEat is passed as a prop to the child component Cat.
 
+### Lifting state up
+- When lifting state up, you will pass handler functions from the common parent component to its children as props.
+- These handlers will be declared in the parent but called in the children components.
+- In the children components you can modify the data and then send it back to the parent, calling the handler received as a prop.
+- In that way, the parent component will have access to the data coming from the children.
+- Eventually, the parent component can pass it down again.
+
 ## State and Life Cycle
 
 > Note: Always recommended to read [this](https://reactjs.org/docs/state-and-lifecycle.html) for state and life cycle of state from official docs. All the coding challenges are also solved in components/state.js from react-practice-code.
 
 
 ## Hooks in React
+- What are hooks? Simply put, they are just functions that return a value (an array with two items), and they are called hooks because you can use that value and hook it into React components.
+- There are several hooks you should learn, with the most important and most commonly used ones being useState and useEffect.
+
+### 1. The state hook:
+- The state hook, useState, is used to add state to a component. It will return an array with a pair of items: the current (initial) value, and a function to modify it. Let's see an example:
+
+```
+import React, { useState } from 'react';
+function Example() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+1. Before using it, you need to import useState from React.
+2. The line const [count, setCount] = useState(0); does the following:
+3. It calls useState passing 0 as the initial value.
+4. useState returns an array with two items: the initial value, and a function to modify it.
+5. Using destructuring assignment syntax (the []), we assign the initial value to count, and the function to setCount variables.
+6. Now, we can use count and setCount in the component.
+7. To modify the value of count, you must do it with setCount.
+
+#### Rules of hooks
+There are a couple of rules you should follow to work with hooks:
+
+- You should call hooks at the top level (before return).
+- Don't call them inside loops, conditions, or nested functions.
+- Only call hooks inside React components (not from vanilla JS functions).
+
+#### Other hooks
+useState is the most used hook, but there are others:
+
+- useEffect
+- useContext
+- useReducer
+- useCallback
+- useMemo
+- useRef
+- useImperativeHandle
+- useLayoutEffect
+- useDebugValue
+
+#### When to use hooks?
+Hooks are functions, and some people love functions and functional programming, while others love classical object-oriented programming based on classes. None is better than the other. You can use the one that you like the most. But take into consideration that hooks are becoming very popular.
+
