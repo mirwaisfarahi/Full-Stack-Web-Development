@@ -106,6 +106,8 @@ yarn add react-popper@0.9.2
 - They are pieces of code with a specific purpose, that you can reuse and compose to build bigger, complex applications (yes, just like functions!). The idea is to make code reusable.
 - Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
+![React Component](./images/components.png)
+
 ### Types of components
 1. Class components use the ES6 class syntax, adding some specific React features: state, props, lifecycle methods, and a render() method.
 
@@ -120,6 +122,21 @@ It doesn't mean class components are deprecated - they are still fully supported
 
 > Note: All React components must act like pure functions with respect to their props.
 Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept of “state”. State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.
+
+### The Concept of Virtual DOM
+- The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document).
+- Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML.
+- But hey! There is a problem. Though not with the DOM. Every time the DOM changes, the browser would need to recalculate the CSS, run layout and repaint the web page.
+- And with Single Page Application (SPA) whereby JavaScript updates the DOM much more than they have to. Things become slower due to the process in the browser workflow after DOM manipulation.
+- As the name implies, it is a virtual representation of the actual DOM. It uses a strategy that updates the DOM without having to redraw all the webpage elements. This ensures that the actual DOM receive only the necessary data to repaint the UI.
+- Let's see how it works. Whenever a new element is added to the UI, a virtual DOM is created. Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare with the previous version to detect which of the virtual DOM object has changed. It then updates ONLY the object on the real DOM. This has a whole lot of optimization as it reduces the performance cost of re-rendering the webpage.
+
+### Enabling the Strict Mode in React Application
+- During the development stage of your application, you’d want to get notified about any potential problems associated with your app so you can quickly address the issue(s).
+
+- React provides for us the StrictMode to activate checks and logs a warning message at runtime.
+
+- To enable it, we simply wrap our component with <React.StrictMode>
 
 ## Props & state
 
