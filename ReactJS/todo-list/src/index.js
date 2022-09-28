@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import ComponentLifeCycle from './ComponentLifeCycle';
+import FetchData from './FetchData';
+import ReactRouter from './ReactRouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <ComponentLifeCycle />
+    <FetchData />
+    <ReactRouter />
   </React.StrictMode>
 );
 
