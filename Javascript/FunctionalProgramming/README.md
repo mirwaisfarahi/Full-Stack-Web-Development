@@ -104,6 +104,6 @@ const result = numbers.map(doubleNumber).filter(isEven).reduce((total, num) => t
 console.log(result); // 42
 
 3. Middleware Chains
-   - In functional programming middleware chains are a way to compose and sequence a series of functions or middleware components to process a data or perform actions in a specific order.
-   - In a middleware chain, each middleware component is a function that takes input, performs some processing or action, and optionally passes the modified input to the next middleware component in the chain. The output of one middleware function becomes the input of the next function, forming a pipeline-like structure.
-     An example is provided in [middleware chain section](examples.js)
+   In functional programming middleware chains are a way to compose and sequence a series of functions or middleware components to process a data or perform actions in a specific order.
+   In a middleware chain, each middleware component is a function that takes input, performs some processing or action, and optionally passes the modified input to the next middleware component in the chain. The output of one middleware function becomes the input of the next function, forming a pipeline-like structure.
+   An example is provided in [middleware chain section](middlewareChain.js)
