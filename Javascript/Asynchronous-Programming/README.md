@@ -37,6 +37,8 @@
 
 ![Callack ilustration](./images/callback2.png)
 
+- Callback hell, also known as the pyramid of doom, refers to a situation in asynchronous programming where multiple nested callbacks are used, leading to code that is difficult to read, maintain, and reason about. It occurs when there are many asynchronous operations that depend on the results of each other, resulting in deeply nested callback functions.
+
 - What's the solution to this?
 
 ## Use Promises to Escape Callback Hell
