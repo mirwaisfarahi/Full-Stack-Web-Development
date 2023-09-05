@@ -41,9 +41,9 @@
 
 ## Use Promises to Escape Callback Hell
 
-![Promises](/images/promise.png)
+![Promises](./images/promise.png)
 
-![Promises](/images/promise2.png)
+![Promises](./images/promise2.png)
 
 1. Pending: This is the initial stage. Nothing happens here. Think of it like this, your customer is taking their time giving you an order. But they haven't ordered anything yet.
 2. Resolved: This means that your customer has received their food and is happy.
