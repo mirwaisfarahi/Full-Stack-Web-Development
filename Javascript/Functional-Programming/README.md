@@ -118,3 +118,32 @@ console.log(result); // 42
 - no contents yet
 
 ## Dealing with Side Effects
+
+### Identifying and Handling Side Effects
+
+- Side effects occur when a function changes something outside of its scope, such as modifying global variables or interacting with external resources like databases.
+- In functional programming, reducing and managing side effects is essential to maintain the purity and predictability of your code.
+- Look at [side effect code example](sideEffects.js)
+
+### Pure Functions and Side Effect Management
+
+- We can write pure functions by seperating pure and impure parts of the code.
+- Look at [pure function example](sideEffects.js)
+
+### Introduction to Monads
+
+- contents needs to be added
+
+## Data Transformation and Manipulation
+
+### Overview of Data Transformation in Functional Programming
+
+- Functional programming is a natural fit for transforming and manipulating data. It encourages you to apply functions to data to get the desired output while maintaining a clear and predictable flow.
+
+### Working with Map, Filter, and Reduce Functions
+
+- Let's dive into some commonly used higher-order functions for data transformation:
+
+1. Map: Transform each element in an array and return a new array. Look at [map example](map.js)
+2. Filter: Create a new array containing elements that satisfy a given condition. Look at [filter example](filter.js)
+3. Reduce: Combine all elements in an array into a single value. Look at [reduce example](reduce.js)
