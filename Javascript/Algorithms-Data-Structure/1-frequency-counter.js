@@ -66,3 +66,4 @@ const areThereDuplicates = (...argu) => {
 console.log(areThereDuplicates(1, 2, 3)); // false
 console.log(areThereDuplicates('a', 'b', 'c', 'a')); // true
 
+// Example 3: https://medium.com/nerd-for-tech/problem-solving-patterns-frequency-counter-20205a1ecfb7
