@@ -1,27 +1,27 @@
-var isAnagram = function(s = "nnagram", t = "nagaram") {
-    // s = s.split('');
-    // t = t.split('');
-    // first check the length is same for both strings
-    if(s.length !== t.length) return false;
+const uncommonFromSentences = (s1 = "this apple is sweet", s2 = "this apple is sour") => {
+    
+    // use hash table => frequency counter and object/set
+    const wordCounter = {};
 
-    // use frequency counter method: use of object/set to store frequency value
-    const frequencyCounter1 = {};
-    const frequencyCounter2 = {};
+    // add array to store the result
+    const result = [];
 
-    for(let val of s) {
-        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    const arr1 = s1.split(' ');
+    const arr2 = s2.split(' ');
+
+    for(let val of arr1) {
+        wordCounter[val] = (wordCounter[val] || 0) + 1;
     }
 
-    for(let val of t) {
-        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    for(let val of arr2) {
+        wordCounter[val] = (wordCounter[val] || 0) + 1;
     }
 
-    for(let key in frequencyCounter1) {
-        if(!(key in frequencyCounter2)) return false;
-
-        if(frequencyCounter1[key] !== frequencyCounter2[key]) return false;
+    for(key in wordCounter) {
+        if(wordCounter[key] == 1) result.push(key)
     }
 
-    return true;
-};
-console.log(isAnagram())
+    return result;
+}
+
+console.log(uncommonFromSentences())

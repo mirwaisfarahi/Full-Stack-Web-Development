@@ -1,0 +1,113 @@
+// Here are some additional details and features of the Map object in JavaScript:
+
+// ITERATING OVER THE ENTIRE MAP: We can also use forEach() method to iterate over key-value pairs
+
+const hashTable = new Map();
+hashTable.set("key1", "value1");
+hashTable.set("key2", "value2");
+hashTable.set("key3", "value3");
+
+hashTable.forEach((value, key) => {
+    console.log(key, value)
+});
+
+// Apart from forEach() we use for...of loop 
+
+for(let [key, value] of hashTable) {
+    console.log(key, value)
+}
+
+// CLEARING THE MAP: To remove all key-values use clear() method.
+
+hashTable.clear();
+console.log(hashTable.size) // output: 0
+
+// INITUALIZE A MAP WITH KEY-VALUE PAIRS: Intialize a Map with an array of key-value pairs
+
+const IntialData = [
+    ["key1", "value1"],
+    ["key2", "value2"]
+];
+const hashTable2 = new Map(IntialData);
+
+// USING OBJECTS AS KEYS: In JS, objects can be used as keys in a Map.
+// It allows us to associate values with specific objects.
+
+const obj1 = {id: 1};
+const obj2 = {id: 2};
+
+hashTable.set(obj1, "value1");
+hashTable.set(obj2, "value2");
+
+console.log(hashTable.get(obj1)) // value1
+ 
+// MAP VS OBJECT IN JS: Despite there similiraties, there are differences:
+// 1. Objects only allow string keys, while Map allows keys of any data type.
+// 2. Map preserves the inserttion order of elements, while object properties may not have a 
+// guarranteed order.
+// 3. Map provides built-in methods for size, iteration, and key existence checks, while
+// objects require manual iteration or Object.keys()
+
+// PERFORMANCE CONSIDERATION:
+/** When number of elements is small, then JS plain object is having good performance. However,
+as the number of elements data increases then performance of Map object Hash table is better due to 
+its optimized internal data structure.
+
+Map object in JS provides efficient way to implement hash table functioanlity by offering a wide range of features.
+ */
+
+// EQUALITY COMPARISON FOR KEYS:
+// In a Map object, keys are compared using the SameValueZero algorithm, which is same as strict equality (===).
+const key1 = 5;
+const key2 = 5;
+const hashTable3 = new Map();
+
+hashTable3.set(key1, "value1");
+console.log(hashTable3.get(key2)); // Output: value1
+
+// However, it is important to note that objects and arrays are reference types, so they are compared
+// by reference, not by value.
+
+const obj3 = { id: 1 };
+const obj4 = { id: 1 };
+const hashTable4 = new Map();
+
+hashTable4.set(obj3, "value1");
+console.log(hashTable4.get(obj4)); // Output: undefined
+
+// USING MAP WITH ANY DATA TYPE: 
+// One of Map advantage it can use any data type as key - functions, objects, and even other Map intances.
+
+const functionKey = () => console.log("hello");
+const objectKey = { id: 1};
+const nestedMapKey = new Map();
+
+const hashTable5 = new Map();
+
+hashTable5.set(functionKey, "value1");
+hashTable5.set(objectKey, "value2");
+hashTable5.set(nestedMapKey, "value3");
+
+console.log(hashTable5.get(functionKey)); // Output: value1
+console.log(hashTable5.get(objectKey)); // Output: value2
+console.log(hashTable5.get(nestedMapKey)); // Output: value3
+
+// CONVERT MAP TO ARRAY: Convert a Map to an array using Array.from() method or the spread syntax.
+
+const keyValueArray1 = Array.from(hashTable5);
+console.log(keyValueArray1);
+
+const keyValueArray2 = [...hashTable5];
+console.log(keyValueArray2);
+
+// USING MAP AS AN ALTERNATIVE TO OBJECTS:
+/**
+In certain scenarios, using a Map object can offer benefits over plain JavaScript objects ({}). 
+Some advantages include:
+1. Preserving key insertion order, which is not guaranteed in objects.
+2. Built-in methods for checking key existence (has()), getting the size (size), and clearing the contents (clear()).
+3. Ability to use any data type as keys, including objects and other Map instances.
+
+However, if the keys in your data structure are limited to strings or symbols and you don't require the additional 
+features provided by Map, using objects may be more appropriate and performant.
+ */

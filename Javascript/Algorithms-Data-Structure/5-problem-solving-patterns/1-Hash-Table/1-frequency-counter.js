@@ -1,6 +1,7 @@
 // FREQUENCY COUNTER
 // This pattern uses objects or sets to collect values/frequency of values
 // This can often avoid the need for nested loops or O(n2) operations with array and strings
+
 //https://github.com/alexticovschi/JavaScript-Algorithms-and-Data-Structures-Masterclass
 // https://github.com/NKaty/Algorithms-and-Data-Structures/tree/master/src/problem-solving-patterns/frequency-counter
 
@@ -66,4 +67,16 @@ const areThereDuplicates = (...argu) => {
 console.log(areThereDuplicates(1, 2, 3)); // false
 console.log(areThereDuplicates('a', 'b', 'c', 'a')); // true
 
-// Example 3: https://medium.com/nerd-for-tech/problem-solving-patterns-frequency-counter-20205a1ecfb7
+// Example: 
+
+const findPair = (arr, num) => {
+    if(!arr.length) return false;
+
+    const obj = {};
+
+    for(val of arr) {
+        obj[val] = (obj[val] || 0) + 1
+    }
+}
+
+// Example 4: https://medium.com/nerd-for-tech/problem-solving-patterns-frequency-counter-20205a1ecfb7
