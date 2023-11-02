@@ -24,4 +24,4 @@ const uncommonFromSentences = (s1 = "this apple is sweet", s2 = "this apple is s
     return result;
 }
 
-console.log(uncommonFromSentences())
+console.log(uncommonFromSentences());
