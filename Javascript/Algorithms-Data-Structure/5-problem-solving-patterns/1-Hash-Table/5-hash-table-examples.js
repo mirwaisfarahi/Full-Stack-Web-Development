@@ -1,3 +1,4 @@
+// 1. Sum Zero problem
 const sumZero = (nums = [-1,1,3,4]) => {
     const storage = new Set();
 
@@ -13,3 +14,5 @@ const sumZero = (nums = [-1,1,3,4]) => {
 };
 
 console.log(sumZero());
+// above problem can be also solved using two pointers concept.
+
